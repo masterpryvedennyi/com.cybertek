@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Ebay {
     public static void main(String[] args) throws InterruptedException {
@@ -31,6 +33,15 @@ public class Ebay {
             System.out.println();
         }
 
+        /*
+        new WebDriverWait(driver, 10).until(new ExpectedCondition<Boolean>() {
+            public Boolean apply(WebDriver driver){
+                return driver.getTitle().contains(expectedPartialTitle);
+            }
+        });
+        */
+        }
+
 
     }
-}
+
