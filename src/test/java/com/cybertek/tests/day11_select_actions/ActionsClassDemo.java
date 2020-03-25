@@ -2,6 +2,7 @@ package com.cybertek.tests.day11_select_actions;
 
 import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -52,7 +53,7 @@ public class ActionsClassDemo {
         }
 
         @Test
-    public void dragAndDrop() throws InterruptedException {
+        public void dragAndDrop() throws InterruptedException {
         driver.get("https://demos.telerik.com/kendo-ui/dragdrop/index");
         WebElement money = driver.findElement(By.id("draggable"));
         WebElement bank = driver.findElement(By.id("droptarget"));
@@ -61,4 +62,16 @@ public class ActionsClassDemo {
         Thread.sleep(4000);
 
         }
+
+        @Test
+        public void dragAndDrop1() throws InterruptedException {
+        driver.get("https://demos.telerik.com/kendo-ui/dragdrop/index");
+        WebElement money = driver.findElement(By.id("draggable"));
+        WebElement bank = driver.findElement(By.id("droptarget"));
+
+        actions.moveToElement(money).clickAndHold().moveToElement(bank).release().build().perform();
+        Thread.sleep(4000);
+
+
+    }
 }
