@@ -14,8 +14,10 @@ import org.openqa.selenium.safari.SafariOptions;
 
 public class Driver {
 
+    //by making private we cannot create instance object of driver
     private Driver(){}
 
+    //by making it static we share it among all objects
     private static WebDriver driver;
 
     public static WebDriver getDriver(){
@@ -61,6 +63,11 @@ public class Driver {
             }
         }
         return driver;
+    }
+
+    public static void closeDriver(){
+        driver.quit();
+        driver = null;
     }
 
 
