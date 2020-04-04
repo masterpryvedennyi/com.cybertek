@@ -1,11 +1,10 @@
-package com.cybertek.tests.day14;
+package com.cybertek.tests.day14_test_base_props_driver;
 
 import com.cybertek.utilities.ConfigurationReader;
 import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
-import javax.security.auth.login.Configuration;
 import java.util.Properties;
 
 public class PropertiesExample {
