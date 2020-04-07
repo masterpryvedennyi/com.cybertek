@@ -45,14 +45,14 @@ public abstract class VytrackPageBase {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
         wait.until(ExpectedConditions.elementToBeClickable(menu1El));
         try {
-            Thread.sleep(500);
+            Thread.sleep(1000);
         }catch (InterruptedException e){
             e.printStackTrace();
         }
         menu1El.click();
         wait.until(ExpectedConditions.elementToBeClickable(menu2El));
         try {
-            Thread.sleep(500);
+            Thread.sleep(1000);
         }catch (InterruptedException e){
             e.printStackTrace();
         }
