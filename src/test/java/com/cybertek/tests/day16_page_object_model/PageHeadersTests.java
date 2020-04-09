@@ -13,10 +13,14 @@ public class PageHeadersTests extends VytrackTestBase {
 
     @Test
     public void dashboardPageTest(){
+        test = report.createTest("Dashboard Page Title Test");
+        test.info("logging in to application");
         loginPage.login("driver_username", "driver_password");
         wait.until(ExpectedConditions.textToBePresentInElement(dashboardPage.pageHeader,"Quick Launchpad"));
         String actual = dashboardPage.pageHeader.getText();
+        test.info("verifying page title");
         assertEquals(actual, "Quick Launchpad");
+        test.pass("PASS: Dashboard Page Title Test");
     }
 
     //go to vytrack
@@ -26,6 +30,8 @@ public class PageHeadersTests extends VytrackTestBase {
 
     @Test
     public void fleetVehicleTest() {
+        test = report.createTest("Fleet Vehicle Title Test");
+        test.info("logging in to application");
         loginPage.login("driver_username", "driver_password");
         wait.until(ExpectedConditions.elementToBeClickable(dashboardPage.fleet));
         dashboardPage.fleet.click();
@@ -34,8 +40,9 @@ public class PageHeadersTests extends VytrackTestBase {
 
         wait.until(ExpectedConditions.textToBePresentInElement(vehiclesPage.pageHeader, "Cars"));
         String actual = vehiclesPage.pageHeader.getText();
+        test.info("verifying page title");
         assertEquals(actual, "Cars");
-
+        test.pass("PASS: Fleet Vehicle Title Test");
 
     }
 }

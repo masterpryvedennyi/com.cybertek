@@ -37,7 +37,6 @@ public class SoftAssertionExamples {
 
         softAssert.assertTrue(true, "fifth assertion");
         System.out.println("fifth assertion done");
-
         softAssert.assertAll();
     }
 }
